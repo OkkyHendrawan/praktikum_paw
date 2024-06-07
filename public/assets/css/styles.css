@@ -1,0 +1,385 @@
+
+html {
+    height: 100%;
+}
+
+/* Mengatur font dan margin/padding default untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Warna teks link */
+    font-weight: bold; /* Membuat teks link tebal */
+    padding: 10px 15px; /* Padding link */
+    transition: color 0.3s, background-color 0.3s; /* Transisi halus untuk warna dan latar belakang */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3; /* Warna teks link saat hover */
+    background-color: #ffea00; /* Warna latar belakang link saat hover */
+}
+
+/* Gaya untuk section */
+.section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0; /* Padding atas dan bawah untuk section */
+}
+
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0; /* Padding atas dan bawah untuk section */
+}
+
+.section1 {
+    background-color: #f1f1f1; /* Warna latar belakang section1 */
+}
+
+.section2 {
+    background-color: #4169E1; /* Warna latar belakang biru royal untuk section2 */
+    color: rgb(0, 0, 0); /* Warna teks untuk section2 */
+}
+
+/* Gaya untuk container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Gaya untuk row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gaya untuk kolom */
+.col-md-6 {
+    width: 100%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk konten */
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Gaya untuk heading */
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 700; /* Membuat teks tebal */
+}
+
+/* Gaya untuk paragraf */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.btn-custom {
+    background-color: #d3d3d3; /* Gray background */
+    color: #000; /* Black text */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 5px 15px; /* Padding for the button */
+    font-weight: bold; /* Bold text */
+}
+
+.btn-custom:hover {
+    background-color: #b3b3b3; /* Slightly darker gray on hover */
+}
+
+
+/* Gaya untuk tombol saat hover */
+button:hover {
+    background-color: #5a6268;
+}
+
+/* Gaya untuk container gambar */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* Gaya untuk gambar dalam container */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk gambar profil */
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Gaya untuk gambar profil dalam kartu */
+.profile-picture img {
+    width: 100%;
+    height: auto;
+}
+
+/* Gaya untuk kolom penuh */
+.col-md-12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk kartu */
+.card1 {
+    background-color: #4169E1; /* Royal blue background color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.info {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px; /* Padding for better spacing */
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+/* Specific styles for the first and second cards */
+.card1:nth-child(1) {
+    flex-direction: row; /* Default direction for the first card */
+}
+
+.card1:nth-child(1) .profile-picture {
+    margin-left: 20px; /* Margin for the first card */
+}
+
+.card1:nth-child(2) {
+    flex-direction: row-reverse; /* Reverse direction for the second card */
+}
+
+.card1:nth-child(2) .profile-picture {
+    margin-right: 20px; /* Margin for the second card */
+}
+
+
+/* Gaya untuk layar kecil */
+@media (max-width: 768px) {
+    .card1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin: 0 0 10px 0;
+    }
+
+    .card1:first-child {
+        flex-direction: column; /* Memastikan tumpukan yang tepat pada layar kecil */
+    }
+
+    .card1:first-child .profile-picture {
+        margin: 0 0 10px 0; /* Reset margin untuk layar kecil */
+    }
+
+    .section1, .section2 {
+        padding: 40px 0; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .image-container {
+        margin: 0 auto 20px;
+    }
+}
+
+/* Gaya khusus untuk gambar profil dalam kartu */
+.card1 .profile-picture {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px 0 0;
+}
+
+/* Section About Me */
+.section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Tinggi penuh viewport untuk sentralisasi vertikal */
+    box-sizing: border-box; /* Sertakan padding dalam perhitungan tinggi */
+    padding: 0; /* Reset padding jika ada */
+}
+
+/* Gaya untuk kartu About Me */
+.card2 {
+    padding: 50px;
+    width: 100%;
+    max-width: 500px; /* Pastikan kartu tidak melebihi lebar tertentu */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gaya untuk foto dalam kartu About Me */
+.photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gaya untuk teks dan tombol dalam kartu About Me */
+h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.id-number {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Gaya untuk tombol */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f1f1f1;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center; /* Sentralisasi teks */
+}
+
+/* Gaya untuk tombol saat hover */
+button:hover {
+    background-color: #ddd;
+}
+
+.back-to-top:hover {
+    opacity: 0.8;
+}
+
+/* Gaya untuk footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1bd057;; /* Warna latar belakang footer */
+}
+
+/* Gaya untuk link sosial di footer */
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antara ikon */
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333; /* Warna teks */
+    font-size: 18px;
+    font-weight: bold; /* Membuat teks menjadi tebal */
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* Warna teks link sosial saat hover */
+.social-links a:hover {
+    color: #0073b1; /* Warna teks saat hover */
+}
+
+.social-links i {
+    margin-right: 8px; /* Jarak antara ikon dan teks */
+    transition: color 0.3s;
+}
+
+/* Warna khusus untuk setiap ikon */
+.github-icon {
+    color: #333; /* Warna khas GitHub */
+}
+
+.instagram-icon {
+    color: #E4405F; /* Warna khas Instagram */
+}
+
+.linkedin-icon {
+    color: #0077B5; /* Warna khas LinkedIn */
+}
+
+/* Warna ikon saat hover */
+.social-links a:hover .github-icon {
+    color: #333;
+}
+
+.social-links a:hover .instagram-icon {
+    color: #E4405F;
+}
+
+.social-links a:hover .linkedin-icon {
+    color: #0077B5;
+}
